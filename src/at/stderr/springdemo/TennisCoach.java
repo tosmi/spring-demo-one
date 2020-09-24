@@ -1,20 +1,21 @@
 package at.stderr.springdemo;
 
-public class BaseballCoach implements Coach {
+public class TennisCoach implements Coach{
 	
 	private FortuneService fortuneService;
 	
-	public BaseballCoach(FortuneService theFortuneService) {
+	public TennisCoach(FortuneService theFortuneService) {
 		this.fortuneService = theFortuneService;
 	}
 	
 	@Override
 	public String getDailyWorkout() {
-		return "Spend 30 min on batting practice";
+		return "Do a 100 topspin services";
 	}
 
 	@Override
 	public String getDailyFortune() {
+		// TODO Auto-generated method stub
 		return fortuneService.getFortune();
 	}
 }
