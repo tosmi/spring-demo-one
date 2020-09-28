@@ -20,7 +20,8 @@
     
     <bean id="myCoach" 
           class="at.stderr.springdemo.TrackCoach"
-          scope="prototype">
+          init-method="doMyStartupStuff"
+          destroy-method="doMyCleanupStuff">
     	<constructor-arg ref="myFortuneService"/>
     </bean>
 </beans>
