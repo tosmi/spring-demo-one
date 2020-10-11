@@ -19,8 +19,18 @@
     </bean>
     
     <bean id="myCoach" 
+          class="at.stderr.springdemo.TennisCoach"
+          scope="prototype"
+          init-method="initMethod"
+          destroy-method="destroyMethod">
+    	<constructor-arg ref="myFortuneService"/>
+    </bean>
+    
+    <bean id="myOtherCoach" 
           class="at.stderr.springdemo.TrackCoach"
-          scope="prototype">
+          scope="singleton"
+          init-method="doMyStartupStuff"
+          destroy-method="doMyCleanupStuff">
     	<constructor-arg ref="myFortuneService"/>
     </bean>
 </beans>

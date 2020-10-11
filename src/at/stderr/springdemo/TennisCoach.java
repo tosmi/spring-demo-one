@@ -18,4 +18,12 @@ public class TennisCoach implements Coach{
 		// TODO Auto-generated method stub
 		return fortuneService.getFortune();
 	}
+	
+	public void initMethod() {
+		System.out.println("TennisCoach: inside init-method");
+	}
+	
+	public void destroyMethod() {
+		System.out.println("TennisCoach: inside destroy-method");
+	}
 }
